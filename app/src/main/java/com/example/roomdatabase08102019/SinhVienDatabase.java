@@ -14,9 +14,7 @@ public abstract class SinhVienDatabase extends RoomDatabase {
 
     private static SinhVienDatabase sinhVienDatabase = null;
 
-    private SinhVienDatabase(){
-
-    }
+    protected abstract SinhvienDao sinhvienDao();
 
     public static SinhVienDatabase getInstance(Context context){
         if (sinhVienDatabase == null){
@@ -29,4 +27,6 @@ public abstract class SinhVienDatabase extends RoomDatabase {
         }
         return sinhVienDatabase;
     }
+
+
 }
